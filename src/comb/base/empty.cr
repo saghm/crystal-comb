@@ -1,8 +1,9 @@
+require "../parser"
 require "../result"
 
 module Comb
   module Base
-    struct Empty
+    struct Empty < Parser
       def matches?(s : String)
         s.empty?
       end

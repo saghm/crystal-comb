@@ -1,8 +1,9 @@
+require "../parser"
 require "../result"
 
 module Comb
   module Base
-    struct Char
+    struct Char < Parser
       property v
 
       def initialize(@v)

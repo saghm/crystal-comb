@@ -29,5 +29,9 @@ module Comb
     def size
       @results.size
     end
+
+    def +(other)
+      Result.new(@results + other.results)
+    end
   end
 end
