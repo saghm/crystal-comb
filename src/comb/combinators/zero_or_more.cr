@@ -6,13 +6,21 @@ module Comb
     struct ZeroOrMore < Parser
       property parser
 
-      def inititalize(@parser)
+      def initialize(@parser : Parser)
       end
 
       def matches?(s)
+        return true if s.empty?
+
+        Sequence.new(@parser, self).matches?(s)
+      end
+
+      def parse(s)
         return Result.new([{ "", "" }]) if s.empty?
 
-        Sequence.new(@parser, self).parse(s)
+        results = Sequence.new(@parser, self).parse(s).results
+        results << { "", s }
+        Result.new(results)
       end
     end
   end

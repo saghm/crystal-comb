@@ -13,8 +13,8 @@ module Comb
         @a.matches?(s) || @b.matches?(s)
       end
 
-      def parse?(s : String)
-        @a.parse?(s) + @b.parse(s)
+      def parse(s : String)
+        @a.parse(s) + @b.parse(s)
       end
     end
   end

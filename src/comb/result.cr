@@ -3,7 +3,8 @@ module Comb
     include Enumerable({String, String})
     property results
 
-    def initialize(@results : Array({String, String}))
+    def initialize(results : Array({String, String}))
+      @results = results.uniq
     end
 
     def success?
@@ -14,8 +15,8 @@ module Comb
       @results.empty?
     end
 
-    def each(&block)
-      @results.each &block
+    def each
+      @results.each { |r| yield r }
     end
 
     def parsed_values

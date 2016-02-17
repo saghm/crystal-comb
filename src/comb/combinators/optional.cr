@@ -7,7 +7,7 @@ module Comb
       property either
 
       def initialize(parser : Parser)
-        @either = Either.new(parser, Empty.new)
+        @either = Either.new(parser, Base::Empty.new)
       end
 
       def matches?(s)

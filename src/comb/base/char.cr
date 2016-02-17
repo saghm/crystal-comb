@@ -15,7 +15,7 @@ module Comb
 
       def parse(s : String)
         vals = [] of {String, String}
-        vals.push({ s[0..0], s[1..-1] }) unless s.empty? || s[0] != @v
+        vals << { s[0..0], s[1..-1] } unless s.empty? || s[0] != @v
 
         Result.new(vals)
       end

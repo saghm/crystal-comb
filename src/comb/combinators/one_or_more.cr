@@ -9,11 +9,11 @@ module Comb
       property sequence
 
       def initialize(parser : Parser)
-        @sequence = Sequence.new(Optional.new(parser), ZeroOrMore.new(parser))
+        @sequence = Sequence.new(parser, ZeroOrMore.new(parser))
       end
 
       def matches?(s : String)
-        @sequence.matches(s)
+        @sequence.matches?(s)
       end
 
       def parse(s : String)
