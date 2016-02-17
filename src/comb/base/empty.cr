@@ -3,11 +3,11 @@ require "../result"
 module Comb
   module Base
     struct Empty
-      def matches?(s)
+      def matches?(s : String)
         s.empty?
       end
 
-      def parse(s)
+      def parse(s : String)
         Result.new([{ "", s }])
       end
     end

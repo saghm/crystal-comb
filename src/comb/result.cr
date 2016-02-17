@@ -3,15 +3,15 @@ module Comb
     include Enumerable({String, String})
     property results
 
-    def initialize(@results)
+    def initialize(@results : Array({String, String}))
     end
 
     def success?
-      @result
+      !failure?
     end
 
     def failure?
-      !success?
+      @results.empty?
     end
 
     def each(&block)
@@ -24,6 +24,10 @@ module Comb
 
     def results
       @results.dup
+    end
+
+    def size
+      @results.size
     end
   end
 end

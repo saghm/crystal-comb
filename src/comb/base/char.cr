@@ -8,12 +8,13 @@ module Comb
       def initialize(@v)
       end
 
-      def matches?(s)
+      def matches?(s : String)
         s.size == 1 && s[0] == @v
       end
 
-      def parse(s)
-        vals = matches?(s) ? [{ s[0..0], s[1..-1] }] : [] of {String, String}
+      def parse(s : String)
+        vals = [] of {String, String}
+        vals.push({ s[0..0], s[1..-1] }) unless s.empty? || s[0] != @v
 
         Result.new(vals)
       end
