@@ -6,7 +6,7 @@ module Comb
       end
 
       def parse
-        Result.new([] of Tuple(String, String))
+        Result.new([] of {String, String})
       end
     end
   end

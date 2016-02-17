@@ -13,7 +13,7 @@ module Comb
       end
 
       def parse(s)
-        vals = matches?(s) ? [{ s[0..0], s[1..-1] }] : [] of Array(Tuple(String, String))
+        vals = matches?(s) ? [{ s[0..0], s[1..-1] }] : [] of {String, String}
 
         Result.new(vals)
       end

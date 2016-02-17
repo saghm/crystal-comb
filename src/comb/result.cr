@@ -1,6 +1,6 @@
 module Comb
   struct Result
-    include Enumerable(Tuple(String, String))
+    include Enumerable({String, String})
     property results
 
     def initialize(@results)
