@@ -10,17 +10,17 @@ describe Combinators::ZeroOrMore do
 
   describe "#matches?" do
     it "returns true iff the string is empty or can be split into substrings that each are matched by the parser" do
-      x.matches?("xxxx").should eq(true)
-      y.matches?("xxxx").should eq(false)
-      none.matches?("xxxx").should eq(false)
+      x.matches?("xxxx").should be_true
+      y.matches?("xxxx").should be_false
+      none.matches?("xxxx").should be_false
 
-      x.matches?("x").should eq(true)
-      y.matches?("x").should eq(false)
-      none.matches?("x").should eq(false)
+      x.matches?("x").should be_true
+      y.matches?("x").should be_false
+      none.matches?("x").should be_false
 
-      x.matches?("").should eq(true)
-      y.matches?("").should eq(true)
-      none.matches?("").should eq(true)
+      x.matches?("").should be_true
+      y.matches?("").should be_true
+      none.matches?("").should be_true
     end
   end
 

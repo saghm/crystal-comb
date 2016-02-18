@@ -11,15 +11,15 @@ describe Combinators::Optional do
 
   describe "#matches?" do
     it "returns true iff the string matches the parser or the string is empty" do
-      x.matches?("x").should eq(true)
-      y.matches?("x").should eq(false)
-      empty.matches?("x").should eq(false)
-      none.matches?("x").should eq(false)
+      x.matches?("x").should be_true
+      y.matches?("x").should be_false
+      empty.matches?("x").should be_false
+      none.matches?("x").should be_false
 
-      x.matches?("").should eq(true)
-      y.matches?("").should eq(true)
-      empty.matches?("").should eq(true)
-      none.matches?("").should eq(true)
+      x.matches?("").should be_true
+      y.matches?("").should be_true
+      empty.matches?("").should be_true
+      none.matches?("").should be_true
     end
   end
 

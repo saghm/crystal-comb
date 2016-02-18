@@ -13,13 +13,13 @@ describe Combinators::Sequence do
 
   describe "#matches?" do
     it "returns true iff the string can be split in two where each substring matches each parser" do
-      x_then_y.matches?("x").should eq(false)
-      x_then_empty.matches?("x").should eq(true)
-      x_then_none.matches?("x").should eq(false)
+      x_then_y.matches?("x").should be_false
+      x_then_empty.matches?("x").should be_true
+      x_then_none.matches?("x").should be_false
 
-      x_then_y.matches?("xy").should eq(true)
-      x_then_empty.matches?("xy").should eq(false)
-      x_then_none.matches?("xy").should eq(false)
+      x_then_y.matches?("xy").should be_true
+      x_then_empty.matches?("xy").should be_false
+      x_then_none.matches?("xy").should be_false
     end
   end
 

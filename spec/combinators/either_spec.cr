@@ -13,13 +13,13 @@ describe Combinators::Either do
 
   describe "#matches?" do
     it "returns true iff either of the parsers match the string" do
-      x_or_y.matches?("x").should eq(true)
-      x_or_empty.matches?("x").should eq(true)
-      x_or_none.matches?("x").should eq(true)
+      x_or_y.matches?("x").should be_true
+      x_or_empty.matches?("x").should be_true
+      x_or_none.matches?("x").should be_true
 
-      x_or_y.matches?("y").should eq(true)
-      x_or_empty.matches?("y").should eq(false)
-      x_or_none.matches?("y").should eq(false)
+      x_or_y.matches?("y").should be_true
+      x_or_empty.matches?("y").should be_false
+      x_or_none.matches?("y").should be_false
     end
   end
 
