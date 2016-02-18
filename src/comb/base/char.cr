@@ -3,9 +3,7 @@ require "../result"
 
 module Comb
   module Base
-    struct Char < Parser
-      property v
-
+    class Char < Parser
       def initialize(@v)
       end
 

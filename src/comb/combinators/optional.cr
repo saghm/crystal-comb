@@ -3,9 +3,7 @@ require "../base/empty"
 
 module Comb
   module Combinators
-    struct Optional < Parser
-      property either
-
+    class Optional < Parser
       def initialize(parser : Parser)
         @either = Either.new(parser, Base::Empty.new)
       end

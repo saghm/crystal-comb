@@ -2,7 +2,7 @@ require "../parser"
 
 module Comb
   module Base
-    struct None < Parser
+    class None < Parser
     end
   end
 end

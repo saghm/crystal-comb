@@ -5,9 +5,7 @@ require "../parser"
 
 module Comb
   module Combinators
-    struct OneOrMore < Parser
-      property sequence
-
+    class OneOrMore < Parser
       def initialize(parser : Parser)
         @sequence = Sequence.new(parser, ZeroOrMore.new(parser))
       end

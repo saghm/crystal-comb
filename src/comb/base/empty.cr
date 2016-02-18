@@ -3,7 +3,7 @@ require "../result"
 
 module Comb
   module Base
-    struct Empty < Parser
+    class Empty < Parser
       def matches?(s : String)
         s.empty?
       end

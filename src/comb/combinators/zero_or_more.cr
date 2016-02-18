@@ -3,19 +3,17 @@ require "../parser"
 
 module Comb
   module Combinators
-    struct ZeroOrMore < Parser
-      property parser
-
-      def initialize(@parser : Parser)
+    class ZeroOrMore < Parser
+      def initialize(@parser)
       end
 
-      def matches?(s)
+      def matches?(s : String)
         return true if s.empty?
 
         Sequence.new(@parser, self).matches?(s)
       end
 
-      def parse(s)
+      def parse(s : String)
         return Result.new([{ "", "" }]) if s.empty?
 
         results = Sequence.new(@parser, self).parse(s).results

@@ -2,11 +2,8 @@ require "../parser"
 
 module Comb
   module Combinators
-    struct Either < Parser
-      property a
-      property b
-
-      def initialize(@a, @b)
+    class Either < Parser
+      def initialize(@a : Parser, @b : Parser)
       end
 
       def matches?(s : String)

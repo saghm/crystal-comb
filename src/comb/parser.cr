@@ -1,7 +1,7 @@
 require "./result"
 
 module Comb
-  abstract struct Parser
+  abstract class Parser
     def matches?(s : String)
       false
     end
