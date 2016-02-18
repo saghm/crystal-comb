@@ -1,5 +1,4 @@
 require "../parser"
-require "../result"
 
 module Comb
   module Base

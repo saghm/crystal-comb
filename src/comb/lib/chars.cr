@@ -1,6 +1,3 @@
-require "../base/char"
-require "../base/none"
-require "../combinators/either"
 require "../parser"
 
 module Comb

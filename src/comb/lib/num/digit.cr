@@ -1,4 +1,3 @@
-require "../chars"
 require "../../parser"
 
 module Comb

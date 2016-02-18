@@ -1,4 +1,3 @@
-require "./either"
 require "../base/empty"
 
 module Comb

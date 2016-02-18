@@ -1,4 +1,3 @@
-require "./sequence"
 require "../parser"
 
 module Comb
