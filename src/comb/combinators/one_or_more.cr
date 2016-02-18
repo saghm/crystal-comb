@@ -1,6 +1,3 @@
-require "./optional"
-require "./sequence"
-require "./zero_or_more"
 require "../parser"
 
 module Comb

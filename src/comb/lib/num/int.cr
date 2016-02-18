@@ -1,15 +1,13 @@
-require "./digit"
-require "../../combinators/one_or_more"
-require "../../combinators/optional"
-require "../../combinators/sequence"
 require "../../parser"
 
 module Comb
   module Lib
     module Num
-      class Digit < Parser
+      class Int < Parser
         def initialize
-          @parser = Sequence.new(Optional.new(Char.new('-'), OneOrMore.new(Digit.new)))
+          @parser = Combinators::Sequence.new(
+                      Combinators::Optional.new(Base::Char.new('-')),
+                      Combinators::OneOrMore.new(Num::Digit.new))
         end
 
         def matches?(s : String)
