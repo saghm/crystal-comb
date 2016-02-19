@@ -3,10 +3,9 @@ require "../spec_helper"
 include Comb
 
 describe Combinators::ZeroOrMore do
-  x          = Combinators::ZeroOrMore.new(Base::Char.new('x'))
-  y          = Combinators::ZeroOrMore.new(Base::Char.new('y'))
-  none       = Combinators::ZeroOrMore.new(Base::None.new)
-
+  x    = Combinators::ZeroOrMore.new(Base::Char.new('x'))
+  y    = Combinators::ZeroOrMore.new(Base::Char.new('y'))
+  none = Combinators::ZeroOrMore.new(Base::None.new)
 
   describe "#matches?" do
     it "returns true iff the string is empty or can be split into substrings that each are matched by the parser" do

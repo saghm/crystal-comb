@@ -3,11 +3,10 @@ require "../spec_helper"
 include Comb
 
 describe Combinators::Optional do
-  x          = Combinators::Optional.new(Base::Char.new('x'))
-  y          = Combinators::Optional.new(Base::Char.new('y'))
-  empty      = Combinators::Optional.new(Base::Empty.new)
-  none       = Combinators::Optional.new(Base::None.new)
-
+  x     = Combinators::Optional.new(Base::Char.new('x'))
+  y     = Combinators::Optional.new(Base::Char.new('y'))
+  empty = Combinators::Optional.new(Base::Empty.new)
+  none  = Combinators::Optional.new(Base::None.new)
 
   describe "#matches?" do
     it "returns true iff the string matches the parser or the string is empty" do

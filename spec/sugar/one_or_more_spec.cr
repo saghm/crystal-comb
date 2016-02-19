@@ -3,10 +3,10 @@ require "../spec_helper"
 include Comb
 
 describe Parser do
-  x          = +Base::Char.new('x')
-  y          = +Base::Char.new('y')
-  empty      = +Base::Empty.new
-  none       = +Base::None.new
+  x     = +Base::Char.new('x')
+  y     = +Base::Char.new('y')
+  empty = +Base::Empty.new
+  none  = +Base::None.new
 
   describe "#+ return value" do
     describe "#matches?" do

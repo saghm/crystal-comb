@@ -3,10 +3,10 @@ require "../spec_helper"
 include Comb
 
 describe Combinators::Sequence do
-  x          = Base::Char.new('x')
-  y          = Base::Char.new('y')
-  empty      = Base::Empty.new
-  none       = Base::None.new
+  x            = Base::Char.new('x')
+  y            = Base::Char.new('y')
+  empty        = Base::Empty.new
+  none         = Base::None.new
   x_then_y     = Combinators::Sequence.new(x, y)
   x_then_empty = Combinators::Sequence.new(x, empty)
   x_then_none  = Combinators::Sequence.new(x, none)

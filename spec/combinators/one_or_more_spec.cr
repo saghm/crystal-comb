@@ -3,11 +3,10 @@ require "../spec_helper"
 include Comb
 
 describe Combinators::OneOrMore do
-  x          = Combinators::OneOrMore.new(Base::Char.new('x'))
-  y          = Combinators::OneOrMore.new(Base::Char.new('y'))
-  empty      = Combinators::OneOrMore.new(Base::Empty.new)
-  none       = Combinators::OneOrMore.new(Base::None.new)
-
+  x     = Combinators::OneOrMore.new(Base::Char.new('x'))
+  y     = Combinators::OneOrMore.new(Base::Char.new('y'))
+  empty = Combinators::OneOrMore.new(Base::Empty.new)
+  none  = Combinators::OneOrMore.new(Base::None.new)
 
   describe "#matches?" do
     it "returns true iff the string can be split into substrings that each are matched by the parser" do
