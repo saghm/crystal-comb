@@ -3,7 +3,7 @@ require "../parser"
 module Comb
   module Base
     class Char < Parser
-      def initialize(@v)
+      def initialize(@v : ::Char)
       end
 
       def matches?(s : String)

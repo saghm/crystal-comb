@@ -14,7 +14,7 @@ module Comb
         results = @first.parse(s).flat_map do |result|
           match, rest = result
 
-          @second.parse(rest).map { |r| { match + r[0], r[1] } } as Array({ String, String })
+          @second.parse(rest).map { |r| { match + r[0], r[1] } }.as Array({ String, String })
         end
 
         Result.new(results)
