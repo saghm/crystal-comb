@@ -3,7 +3,7 @@ require "../parser"
 module Comb
   module Combinators
     class ZeroOrMore < Parser
-      def initialize(@parser)
+      def initialize(@parser : Parser)
       end
 
       def matches?(s : String)

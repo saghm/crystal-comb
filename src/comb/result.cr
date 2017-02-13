@@ -3,8 +3,8 @@ module Comb
     include Enumerable({String, String})
     property results
 
-    def initialize(results : Array({String, String}))
-      @results = results.uniq
+    def initialize(@results : Array({String, String}))
+      @results.uniq!
     end
 
     def success?
